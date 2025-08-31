@@ -1,4 +1,3 @@
-/* General */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +5,6 @@ body {
   color: white;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -62,7 +60,6 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-/* Hero Section */
 .hero {
   align-items: center;
   justify-content: space-between;
@@ -134,7 +131,6 @@ body {
   background: linear-gradient(to right, blue, red);
 }
 
-/* Hero Image */
 .hero-image {
   position: relative;
    transform: translateX(120%);
@@ -176,7 +172,6 @@ body {
   transform: scale(1.3);
 }
 
-/* Social Icons */
 .social-icons {
   position: absolute;
   right: 0px;
@@ -245,7 +240,6 @@ body {
   transform: translateX(-190%);
 }
 
- /* About Section */
         .about {
             color: white;
             transform: translateY(-250%);
@@ -298,8 +292,6 @@ body {
           transform: translate(700%, -500%);
         }
 
-
-    /* Skills Section */
 .skills {
   padding: 80px 20px;
   text-align: center;
@@ -391,7 +383,7 @@ body {
   .skill-name { font-size: 15px; }
 }
 
-/* What I Can Do - 12 cards, 2 columns, subtle right→left motion */
+
 .cando {
   padding: 70px 20px;
   color:white;
@@ -399,7 +391,6 @@ body {
   transform: translateY(-55%);#1f2937
 }
 
-/* section title */
 .cando h2 {
   font-size: 28px;
   margin-bottom: 24px;
@@ -408,7 +399,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* 2-column grid */
 .cando-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -419,7 +409,6 @@ body {
   align-items: start;
 }
 
-/* card shell */
 .cando-card {
   border-radius: 12px;
   padding: 14px;
@@ -430,7 +419,6 @@ body {
   background:#1f2937 ;
 }
 
-/* inner wrapper that animates (keeps layout stable) */
 .card-inner {
   display: block;
   transform: translateX(0);
@@ -438,7 +426,6 @@ body {
   animation: float-slide 6s ease-in-out infinite;
 }
 
-/* staggered delays so cards move at different times */
 .cando-grid .cando-card:nth-child(1) .card-inner  { animation-delay: 0s;  }
 .cando-grid .cando-card:nth-child(2) .card-inner  { animation-delay: 0.12s; }
 .cando-grid .cando-card:nth-child(3) .card-inner  { animation-delay: 0.24s; }
@@ -452,14 +439,12 @@ body {
 .cando-grid .cando-card:nth-child(11) .card-inner { animation-delay: 1.20s; }
 .cando-grid .cando-card:nth-child(12) .card-inner { animation-delay: 1.32s; }
 
-/* animation: subtle right→left float and back for smoothness */
 @keyframes float-slide {
   0%   { transform: translateX(12px); }
   50%  { transform: translateX(-12px); }
   100% { transform: translateX(12px); }
 }
 
-/* visuals inside card */
 .cando-icon {
   width: 46px;
   height: 46px;
@@ -475,7 +460,7 @@ body {
 .cando-card h3 {
   margin: 6px 0 8px;
   font-size: 18px;
-  color: #e6eef8; /* scoped to avoid global <h3> impact */
+  color: #e6eef8; 
 }
 
 .cando-card p {
@@ -485,21 +470,18 @@ body {
   font-size: 14.5px;
 }
 
-/* card hover lift */
 .cando-card:hover .card-inner {
   transform: translateY(-6px);
   transition: transform .22s ease;
-  animation-play-state: paused; /* pause the float while hovering */
+  animation-play-state: paused;
 }
 
-/* responsive: 1 column on small screens */
 @media (max-width: 860px) {
   .cando-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .card-inner {
     animation: none !important;
@@ -507,9 +489,6 @@ body {
   }
 }
 
-
-
-/* Testimonials Section */
 .testimonials-section {
   color: white;
   text-align: center;
@@ -529,7 +508,6 @@ body {
   opacity: 0.8;
 }
 
-/* 2-column layout */
 .testimonials-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -572,8 +550,6 @@ body {
   }
 }
 
-
-/* Contact Section */
 .contact-section {
   background: linear-gradient(to right,blue,red);
   color: white;
@@ -638,10 +614,6 @@ body {
   box-shadow: 0 0 15px crimson;
 }
 
-
-
-
-/* Footer */
 .footer {
   background: #0f172a;   
   color: white;

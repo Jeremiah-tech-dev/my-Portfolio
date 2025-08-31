@@ -6,28 +6,25 @@ const cors = require("cors");
 const app = express();
 const PORT = 5000;
 
-// Middleware to handle form submissions (URL-encoded + JSON)
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-// Route to handle form submission
 app.post("/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
-    // Transporter (use Gmail App Password!)
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "djk14530@gmail.com",  // your Gmail
-        pass: "rbpt muhm qmfq gwzp", // your Gmail App Password
+        user: "djk14530@gmail.com",  
+        pass: "rbpt muhm qmfq gwzp", 
       },
     });
 
     let mailOptions = {
       from: email,
-      to: "djk14530@gmail.com", // the email that will receive messages
+      to: "djk14530@gmail.com", 
       subject: `New Contact Form Submission: ${subject}`,
       text: `
         Name: ${name}
@@ -39,7 +36,7 @@ app.post("/contact", async (req, res) => {
 
     await transporter.sendMail(mailOptions);
 
-    // Send a response page (user sees this after submit)
+    
     res.send(`
       <h2 style="font-family: Arial; color: green;">✅ Thank you, ${name}! Your message has been sent successfully.</h2>
       <a href="/">⬅ Go back to homepage</a>
@@ -53,7 +50,6 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-// Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
