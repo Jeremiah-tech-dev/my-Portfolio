@@ -45,10 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show success message
             this.innerHTML = `
                 <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
-                    <h3>✅ Thank you, ${name}!</h3>
-                    <p>Your message has been received. I'll contact you at ${email} soon!</p>
-                    <p><strong>Your message:</strong> "${message}"</p>
-                    <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">📧 You can also reach me directly at djk14530@gmail.com</p>
+                    <h3>✅ Message Received!</h3>
+                    <p>Thank you for reaching out. I'll get back to you soon!</p>
+                    <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
+                        <a href="https://wa.me/254757076273?text=Hello Jeremiah, I sent you a message through your website!" target="_blank" style="color: white; text-decoration: none;">
+                            📱 Chat on WhatsApp
+                        </a>
+                    </p>
                 </div>
             `;
         });
