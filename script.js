@@ -31,34 +31,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Initialize EmailJS
-    emailjs.init('iQKzKGzM8QqVvQJ-T'); // Your public key
-    
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Send email via EmailJS
-            emailjs.sendForm('service_gmail', 'template_contact', this)
-                .then(function() {
-                    // Show success message
-                    contactForm.innerHTML = `
-                        <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
-                            <h3>✅ Message Sent!</h3>
-                            <p>Thank you for reaching out. I'll get back to you soon!</p>
-                            <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
-                                <a href="https://wa.me/254757076273?text=Hello Jeremiah, I sent you a message through your website!" target="_blank" style="color: white; text-decoration: none;">
-                                    📱 Chat on WhatsApp
-                                </a>
-                            </p>
-                        </div>
-                    `;
-                }, function(error) {
-                    alert('Failed to send message. Please try again.');
-                    console.log('EmailJS error:', error);
-                });
-        });
-    }
+
 });
